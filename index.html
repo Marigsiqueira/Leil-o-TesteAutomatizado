@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Enviar() {
+            var valor = document.getElementById('valor-lance').value
+
+            if (valor.trim() === "") {
+                alert("Por favor, lance um valor.");
+                return;
+            }
+            valor = parseFloat(valor);
+
+            var alerta = document.getElementById('alerta');
+
+            if (valor < 450) {
+                alerta.textContent = "O lance mínimo é R$450,00";
+                alerta.style.color = "red";
+
+                setTimeout(function () {
+                    alerta.textContent = "";
+                }, 2000);
+
+            } else {
+                alerta.textContent = `Lance de R$${valor.toFixed(2)} enviado com sucesso!`;
+                alerta.style.color = "green";
+
+                setTimeout(function () {
+                    alerta.textContent = "";
+                }, 2000);
+            }
+        }
+
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/aaaaaaaa.jpg');
+
+        }
+
+        .header {
+            display: flex;
+            background-color: rgb(0, 0, 27);
+            height: 50px;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        .header p {
+            margin-left: 5px;
+            color: #a85;
+            font-weight: bold;
+
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .descricao {
+            flex: 1;
+            max-width: 400px;
+            margin-right: 280px;
+            margin-top: 58px;
+        }
+
+        .descricao p {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+        }
+
+        #lance {
+            font-weight: 600;
+        }
+
+        .class-img {
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-left: 250px;
+        }
+
+        .class-img img {
+            border-radius: 2px;
+            margin-top: 72px;
+            width: 350px;
+            height: 330px;
+            object-fit: cover;
+            border: 2px solid #a85;
+        }
+
+        .lance {
+            margin-top: 26px;
+            display: flex;
+            flex-direction: row;
+            gap: 25px
+        }
+
+        .lance input {
+            width: 280px;
+            padding: 8px;
+            font-size: 16px;
+            margin-right: 10px;
+            border: 2px solid #a85;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .lance button {
+            width: 80px;
+            height: 38px;
+            border-radius: 2px;
+            color: #fff;
+            font-weight: bold;
+            background-color: rgb(0, 0, 27);
+            border: none;
+            cursor: pointer;
+        }
+
+        .lance button:hover {
+            background-color: #a85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <p>harrypotter</p>
+    </header>
+
+    <main>
+        <div class="class-img">
+            <img src="./img/livrosharrypotter.jpg" alt="">
+        </div>
+
+        <div class="descricao">
+            <h2>Coleção de Livros Harry Potter Capa Dura</h2>
+            <p>Mergulhe no mundo mágico de Harry Potter com esta coleção completa de livros em capa dura! Inclui todos
+                os
+                sete volumes da série, de A Pedra Filosofal a As Relíquias da Morte. Cada livro é encadernado em capa
+                dura
+                resistente e apresenta ilustrações detalhadas, tornando-o perfeito tanto para leitura quanto para
+                exibição.</p>
+            <p id="lance">Lance mínimo: R$: 450,00</p>
+            <div class="lance">
+                <input type="text" id="valor-lance" placeholder="Envie um lance...">
+                <button type="submit" onclick="Enviar()"> Enviar</button>
+            </div>
+            <h4 id="alerta"></h4>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
