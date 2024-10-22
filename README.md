@@ -1,3 +1,7 @@
+Claudia Santana da Silva
+Mariana Gonçalves de Siqueira
+Thiago Messias Santos
+
 # Como Configurar e Executar o Teste Automatizado com Selenium
 
 Siga os passos abaixo para configurar e executar o projeto em seu computador: 
