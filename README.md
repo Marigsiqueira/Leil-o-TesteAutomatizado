@@ -1,5 +1,5 @@
-Claudia Santana da Silva
-Mariana Gonçalves de Siqueira
+Claudia Santana da Silva,
+Mariana Gonçalves de Siqueira,
 Thiago Messias Santos
 
 # Como Configurar e Executar o Teste Automatizado com Selenium
